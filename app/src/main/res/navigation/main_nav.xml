@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/map_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.shady.mylocation.map.MapFragment"
+        android:label="first"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/action_map_fragment_to_address_fragment"
+            app:destination="@id/address_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/address_fragment"
+        android:name="com.shady.mylocation.addresses.AddressesFragment"
+        android:label="second"
+        tools:layout="@layout/fragment_addresses"/>
+
+</navigation>
